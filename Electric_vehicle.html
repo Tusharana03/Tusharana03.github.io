@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Electric vehicle Power Train</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tushar Rana</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Electric vehicle Power Train development </h1>
+							<ul class="actions">
+								<li><a href="https://github.com/Tusharana03/Electric_vehicle.git" class="button scrolly">Project Files</a></li>
+							</ul>
+							<span class="image fit"><img src="images/pic_EV_Sim.JPG" alt="" /></span>
+							<p>The aim of this project is to simulate the Induction motor powered drive train of an Electric vehicle. In this project blocks from Powertrain Block set are used which include Induction motor, IM controller, Three phase voltage source and vehicle body. To control the speed of the vehicle, The direct torque control stratergy is used. It is similar to field oriented control, in that it decouples torque and flux and controls them independently. DTC controls motor torque directly, without a modulator, so torque response is much faster. Direct torque control uses two control loops — a speed control loop and a torque control loop — that work together, along with an advanced motor model, to precisely predict stator flux and motor torque. </p>
+							<p></p>
+							<div class = "inner">
+								<h3> Torque & Brake command generation</h3>
+								<img src="images/pic_EV_cmmnd.JPG" alt="" width="800"/>
+								<p> This makes a outer closed loop which is a speed loop. A PID controller generates the torque and brake command based on the error between the reference speed which is obtained from drive cycle source and the actual vehicle speed which is obtained from 1 DOF vehicle body block.</p>
+							</div>
+							<div class = "inner">
+								<h3> Invertor, Controller and IM motor</h3>
+								<img src="images/pic_EV_invertor.JPG" alt="" width="650"/>
+								<img src="images/pic_EV_im_motor.JPG" alt="" width="650" height="360"/>
+								<p> The torque command generated from the outer closed loop is fed into the IM controller which works in a inner closed loop torque control with IM motor. IM controller is allready provided as a block in Power Train blokset. IM controller sends phase voltage signal to Invertor voltage source which in turn produces the phase voltage and current that controlls the torque output of the motor.</p>
+							</div>
+							<div class = "inner">
+								<h3> Wheel and differentional dynamics</h3>
+								<img src="images/pic_EV_vehicle_dynamics.JPG" alt="" width="650" height="360"/>
+								<img src="images/pic_EV_vehicle_dynamics_2.JPG" alt="" width="650" height="360"/>
+								<p> To simulate the differention dynamics The Open Differential block is used which implements a differential as a planetary bevel gear train. The block matches the driveshaft bevel gear to the crown (ring) bevel gear. The Torsional Compliance block implements a parallel spring-damper to couple two rotating driveshafts, the output is a axial torque to wheels. Wheel dynamics block represents wheel longitudinal and brakes dynamics and outputs longitudinal forces on axle.  </p>
+							</div>	
+							<div class = "inner">
+								<h3> Vehicle body </h3>
+								<img src="images/pic_EV_vehicle_dynamics_body.JPG"/>
+								<p> Vehicle Body 1DOF Longitudinal block implements a one degree-of-freedom (1DOF) rigid vehicle body with constant mass undergoing longitudinal motion. The block outputs normal forces on the axle which is used by the wheel block. The velocity output from this block is the variable which is controlled using two closed loops that is an inner torque loop and outer speed loop. </p>
+							</div>	
+							<div class = "inner">
+								<h3> Results </h3>
+								<img src="images/pic_EV_result.jpg" width="550"/>
+								<p>The aim is that the inner torque closed loop and outer speed closed loop should work together in such a way that the reference speed matches with the vehicle actual velocity. From the graph it can be seen that the vehicle actual velocity profile (yellow) closely matches the reference speed (blue), hence both the control loops are working fine with good and smooth response.</p>
+							</div>	
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

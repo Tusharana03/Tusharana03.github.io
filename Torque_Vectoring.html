@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Torque Vectoring</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tushar Rana</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Development of Torque Vectoring System</h1>
+							<ul class="actions">
+								<li><a href="#" class="button scrolly">Project Files</a></li>
+							</ul>
+							<img src="images/pic_TV_ALL.JPG" alt="" width="1000" height="600"/>
+							<p> The aim of the project is to develop a torque vectoring control system for an electric formula student racing car which improves the vehicle’s cornering performance. This system allows for a high level of flexibility in terms of torque distribution to each of the four wheels and consequently creates an ideal case for the application of a torque vectoring system. In addition to the torque distribution/split control based on the lateral forces, there is also a subsystem within the controller that varies the driving motor torque between the wheels of the front and rear axles. The controller logic was built using MATLAB Simulink with the help of standardized blocks from the Simulink library. Using the IPG CarMaker software, the system was then tested by simulating vehicle behavior on circuits modelled after the ones used in the Formula Student Germany competition. The entire Simulink model is distributed in 3 different phases (as shown below).
+							</p>
+							<div class = "inner">
+								<h3>Bicycle model</h3>
+								<img src="images/pic_TV_BCYL.JPG" alt="" width="800"/>
+								<p> The desired Yaw rate is calculated based on the formula of the bicycle model. This value is taken as an input By the feedback controller to distribute the driving forces on the left and right sides of the vehicle.</p>
+							</div>	
+							<div class = "inner">
+								<h3>Torque distribution front_rear</h3>
+								<img src="images/pic_TV_front_left.JPG" alt="" width="800"/>
+								<p> The driving forces are also distributed separately on the front and rear part of the vehicle. Several inputs (giving the state of the car) are fed into the
+									block and based on the calculation the driving force distribution for front and rear sides are calculated in terms of ratios. These ratios are at latter point multiplied by the total torque demand to distribute torque seperatly at front and rear of the vehicle.   </p>
+							</div>
+							<div class = "inner">
+								<h3>Controller logic</h3>
+								<img src="images/pic_control.jpg" alt="" height ="" width="800"/>
+								<p>Vehicle as whole is considered as the plant with the microcontrollers actuating the control signals with the wheel torques as the chief manipulator. The knowledge of the current lateral acceleration values is used to generate instant command signals to supply torques to the left and the right wheels. The objective of the feedback controller is simple, to carry out correcting actions on the difference between desired and actual output of the system usually referred to as “error”. Here a PID controller is used to get the required yaw correction moment for the vehicle so that vehicle follows the desired yaw rate. This yaw correction moment is then futher used to calculate the desiered additional torque for each tire.  </p>
+							</div>
+							<div class ="inner">
+								<h3>Testing with IPG CarMaker</h3>
+								<img src="images/pic_IPG_2.jpg" alt=""width="600" height="450"/>
+								<img src="images/pic_IPG_3.jpg" alt=""width="600" height="450"/>
+								<p> IPG CarMaker is used to simulate the vehcile dynamics. All the vehicle data is set in the CarMaker software to simulate the vehicle as close to reality as possible. Once the vehicle data is set, the roads to test the vehicle were defiened. IPG CarMaker provides a generic basic Simulink model which can be used to make complex models around it and test them in parallel.</p>
+								<img src="images/pic_IPG.jpg" alt="" height = "700"/>
+								<p>The developed controller is set up as it takes input from the Vehicle Bus maniplutes them and sends them back to the Bus (can be seen in the figure above).</p>
+							</div>
+							<div class ="inner">
+								<h3>Results</h3>
+								<img src="images/pic_results.jpg" alt="" width="700" height="400"/>
+								<img src="images/pic_results_2.jpg" alt="" width="700" height="400"/>
+								<p>First things from the results were observed that there is a difference in the right sides wheel torque(green) and left side wheel torques(red) while cornering (seen in the figure on the left) . From the 2nd image it is observed that the vehicle actual yaw rate(blue) is closely being followed by the desired yaw rate(green). With the series of test performed it was found that the maximum speed limit at which the vehicle can run without going out of stability criteria is 75 kmph. Hence, we were able to gain 4 kmph speed difference with both feedforward and feedback controllers working in parallel as compared to without controller. </p>
+						    </div>
+							
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; All rights reserved.</li>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

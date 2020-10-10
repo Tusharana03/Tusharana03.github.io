@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ECU Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tushar Rana</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Thermal study of ECU design</h1>
+							<p>A Finite Element Thermal Analysis of an ECU package unit is done under this project using ANSYS AIM 19.1. As ECU contains power electronic devices they tends to generate a lot of heat and if this heat is trapped inside, it can cause damage to the internal components of the ECU due to high temperature rise. In this project the method of Air cooling is used to keep the ECU under it's maximum working Temperature range. The effect of different fins design on the maximum internal temperature is studied.</p>
+							<div class = "inner">
+								<h3>3D construction of the ECU</h3>
+								<img src="images/pic_ECU_1.jpg" alt="" width="650"/>
+								<p>In the image the base is the component where the top of the ECU is mounted and also the multilayer PCB. The PCB it's self is desigened to dissipate heat. it is made of several different layers like heat sink, substrate and solders.</p>
+								<img src="images/pic_ECU_2.jpg" alt="" width="650" height="300"/>
+								<p>In this image the main heating elements can be seen which are mounted on the heat sink of the PCB. These are the elements which produces the maximum heat.</p>
+								<img src="images/pic_ECU_3.jpg" alt="" width="650" height="300"/>
+								<p>The grey portion in this image is the inner air inside the ECU packaging which is usually trapped inside and effects the heat transfer between the top and heating elements of the ECU.</p>
+								<img src="images/pic_ECU_4.jpg" alt="" width="650" height="300"/>
+								<p>This is the cover of the ECU which is mounted on the base. The fins on the top of the cover are the main design paramters changed to observe the maximum temperature inside the ECU. This is the first design with straight simple fins.</p>
+								<img src="images/pic_ECU_5.jpg" alt="" width="650" height="350"/>
+								<p>This is the second design with rounded fins. In this design the finsa are constructed in sucha a way that the air enters from the front and goes around creating a swirl motion.</p>
+								<img src="images/pic_ECU_6.jpg" alt="" width="650" height="350"/>
+								<p>This is the third design of the fins. In this design the fins are in steps from the middle of the height of the fins. This design is based on the fact that it increases the no. of edges and surface area for Air and heating surface contact.</p>
+								<img src="images/pic_ECU_7.jpg" alt="" width="650" height="350"/>
+								<p>The outer Air surrounds the entire ECU package. It is given to simulate the effect of atmospheric air cooling</p> 
+							</div>
+							<div class = "inner">
+								<h3> Boundry conditions</h3>
+								<p>Following are the given boundry conditions -</p>
+								<ul>
+									<li>11 chips (uC) that are mounted on the PCB are considered the main source of heat generation. 30W as solid heat source is given in total to all the chips combined together. </li>
+									<li>The base of the ECU is given 105 degree C temperature to represent the ambient temp. condition.</li>
+									<li>Outer volume (air) two faces are given as inlet and outlet</li>
+									<li>Walls surrounding the outer air are insulated wall boundaries</li>
+								</ul>	
+							</div>
+							<div class = "inner">
+								<h3>Contact and interface conditions</h3>
+								<p>Due to the complexity and many different material contacts in the geometry the software could not generate the interface condition automatically. Manually interface generator and interface regions are applied to specific parts. Which are as follows-</p>
+								<p>1.Region interface between the cover, fins and the outer air-</p>
+								<img src="images/pic_ECU_8.jpg" alt="" width="650" height="350"/>
+								<p>2.Region interface between cover and base-</p>
+								<img src="images/pic_ECU_9.jpg" alt="" width="650" height="350"/>
+								<p>3.Region interface between cover, chips and inner air-</p>
+								<img src="images/pic_ECU_10.jpg" alt="" width="650" height="350"/>
+								<p>4.Region interface between inner air and heat sink-</p>
+								<img src="images/pic_ECU_11.jpg" alt="" width="650" height="350"/>
+								<p>5.Region interface between multi-layer PCB-</p>
+								<img src="images/pic_ECU_12.jpg" alt="" width="650" height="350"/>
+								<p></p>
+							</div>
+							<div class = "inner">
+								<h3> Mesh study</h3>
+								<img src="images/pic_ECU_13.jpg" alt="" width="650" height="330"/>
+								<p>In this project, there are different geometries because the designs of the Fins are changed to obtain better thermal properties, but the design changes are only on the top section of the geometry i.e. fins, all other geometry parts remain the same because of this reason instead of performing mesh study individually on all different design, the study is done only for one design to find the best mesh settings and these same settings are then applied to all other designs.The mesh was refiened using several steps and in each step, refinement was stopped when the difference in maximum temperature was less then 2%. These steps are as following-</p>
+								<ul>
+									<li>Step 1: In this step the mesh settings are applied as base settings which are by default predefined by the software automatically. </li>
+									<li>step 2: In this setup, the mesh boundary layer is defined manually, as the software is not able to generate it automatically while keeping all other settings the same as the previous one.</li>
+									<li>step 3: In this step, the meshing element shapes have been modified, based on the fact that complex geometry can be easily meshed using Tetrahedrons, but this requires more solution time, whereas simple geometries can be meshed using Hexahedrons which requires less solution time.
+										Bodies with simple geometry like multilayer PCB, uC, inner air, base are given Hexahedrons element shape while complex geometries like the cover, outer air are given Tetrahedrons element shape. </li>
+										<li>Step 4: In this setup, the two mesh defining properties body sizing and edge sizing are determined. The approach is that the smaller the size of these elements, the better is the mesh refinement and hence results, but more refine mesh needs more time (computational power) to obtain results, so there should be an appropriate, balanced refinement of mesh. These settings are applied to the bodies which are more dominant and have more effect on high temp. reached within.</li>
+								</ul>
+							</div>
+							<div class = "inner">
+								<h3> Results</h3>
+								<p>DESIGN 1.</p>
+								<img src="images/pic_ECU_results_1.jpg" alt="" width="650" height="500"/>
+								<img src="images/pic_ECU_results_1_1.jpg" alt="" width="650" height="500"/>
+								<p>Design 1 is the simplest design among all others, with straight rectangle shaped 9 fins attached to the top of the cover, the dimensions of the fins are mentioned earlier. By evaluating the results of design 1 it is observed that the max. temp. reached within the chips is 112,91 degrees and the location where the max and min temperature is observed, can be seen in the figure above.</p>
+								<P></P>
+								<P>DESIGN 2.</P>
+								<img src="images/pic_ECU_results_2.jpg" alt="" width="650" height="400"/>
+								<img src="images/pic_ECU_results_3.jpg" alt="" width="650" height="400"/>
+								<p>In this design the fins form a curved path for the air to travel between two consecutive fins. This design has 9 number of fins of unequal lengths. The max. temperature reached in the chips is 110,27.</p>
+								<p></p>
+								<P>DESIGN 3.</P>
+								<img src="images/pic_ECU_results_4.jpg" alt="" width="650" height="400"/>
+								<img src="images/pic_ECU_results_5.jpg" alt="" width="650" height="400"/>
+								<p>This design is quite similar to the first design but the fins here are made in two steps. The upper portion of the fins have different width then the base. The max. temp. reached in the chips is 109,53 degrees.</p>
+								<p>After observing and evaluating the results of all three different design it is inferred that the design 3 has the best affect in reducing the max. temp. within the chips.</p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

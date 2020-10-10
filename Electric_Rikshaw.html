@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Electric Rikshaw</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tushar Rana</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Electric rikshaw power train development</h1>
+							<ul class="actions">
+								<li><a href="https://github.com/Tusharana03/Lithium_ion_induction_motor" class="button scrolly">Project Files</a></li>
+							</ul>
+							<span class="image fit"><img src="images/pic_RV.JPG" alt="" height="550" /></span>
+							<p>The Aim of the project is to develop and simulate a electric drive train for small 3-wheel passanger vehicle. The control of DC motor and performence evluation of the drive with differemt drive cycles is also evaluated. To control the speed of the motor PWM technique is used. Parameters like energy consumption in Kwh/km, Battery consumption, total distance travelled and heat generation by the motor and controller is also observed.</p>
+							<div class = "inner">
+								<h3> Drive cycle & Longitudinal Driver</h3>
+								<img src="images/pic_RE_1.JPG" alt="" width="650"/>
+								<p> The drive cycle source is used to provide a referency speed value for the vehicle, which vehicle should follow. The drive cycle input goes to the Longitudinal driver with the actual speed of the vehicle, based on the error between the actual and reference speed this block generates the acceleration and brake vlaues in perecentage which is used to generate the relative PWM to control the DC motor. </p>
+							</div>
+							<div class = "inner">
+								<h3> PWM generator & DC motor</h3>
+								<img src="images/pic_RE_2.JPG" alt="" width="650"/>
+								<img src="images/pic_RE_3.JPG" alt="" width="650" height="330"/>
+								<p>The perecentage values from Acc. command and Brake command are converted into an equal value of voltage which then goes to the Controlled PWM voltage block. Controlled PWM voltage block generates an output voltage based on the duty cycle input, this output voltage goes to the H-bridge which produces an output voltage to power the motor if the input voltage value is greater then the threshold value. The on/off voltage ouput from the H-bridge directly controls the speed of the motor (figure on the right).</p>
+							</div>
+							<div class = "inner">
+								<h3> Vehicle dynamics</h3>
+								<img src="images/pic_RE_4.JPG" alt="" width="650"/>
+								<p> The output of the motor torque goes to the the wheels through a simple gear block. In between the simple gear and wheels a brake block is attached to simulate the braking effect. The wheel blocks implements the wheel dynamics and there output is connected to the vehicle body to simulate vehicle body dynamics. The output velocity from the vehicle body is the actual vehicle speed which has to be controlled and matched with the reference speed. </p>
+							</div>
+							<div class = "inner">
+								<h3> Thermal Sensor</h3>
+								<img src="images/pic_RE_5.JPG" alt="" width="650"/>
+								<p>In addition to just controlling the speed of the vehicle, how much heat is generated from the H-bridge and motor is also observed. The heat port from both the blocks are connected to temepratue sensor block which outputs the temperature increment as the vehicle drives.  </p>
+							</div>
+							<div class = "inner">
+								<h3> Battery SOC estimation & Energy consumed</h3>
+								<img src="images/pic_RE_6.JPG" alt="" width="650"/>
+								<img src="images/pic_RE_7.JPG" alt="" width="650" height="395"/>
+								<p>In oder to reduce the simulation time a simple battery is added as an outer loop to just calculate the battery SOC while the main source of power remains the H-bridge internal power source. Battery SOC is estimated using a Coulomb Counting Method. The Coulomb counting method measures the discharging current of a battery and integrates the discharging current over time in order to estimate SOC. To calculate the energy consumed the perecentage of battery consumed is multiplied by the energy of the battery when fully charged and divided by the distance travelled.</p>
+							</div>
+							<div class = "inner">
+								<h3> Results</h3>
+								<img src="images/pic_RE_result1.JPG" alt="" width="1350"/>
+								<p>From the first graph it can be seen that the vehicle actual speed is trying to follow the reference but it is not able to do that very accurately this is becuase of the fact that all the drive cycles predefiened in the MATLAB are for high powered drive trains but this being an E-rikshaw has a lower powered drive train so it does not have the acceleration capabilities to follow this drive cycle. 2nd graph shows the batters SOC decreasing with time from 100% to almost 91%. The last grapgh shows the temperature increament of the H-bridge controller and the DC motor. </p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
