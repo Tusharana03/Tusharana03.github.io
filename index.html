@@ -1,378 +1,376 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Tushar Rana Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.stats { display: flex; flex-wrap: wrap; gap: 1.5em 2.5em; margin: 0 0 2em 0; }
-			.stats div { flex: 1 1 9em; max-width: 14em; }
-			.stats strong { display: block; font-size: 1.9em; line-height: 1.2; color: #fff; }
-			.stats span { font-size: 0.85em; }
-			.flow { font-weight: bold; color: #fff; line-height: 2; }
-			.case { margin-bottom: 3.5em; }
-			.case pre { overflow-x: auto; }
-			.case pre code { line-height: 1.35; }
-			.cycle { list-style: none; padding: 0; margin: 0 0 2em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(12em, 1fr)); gap: 1em; }
-			.cycle li { margin: 0; padding: 0; }
-			.cycle a { display: block; height: 100%; border: 1px solid rgba(255,255,255,0.35); border-radius: 0.35em; padding: 1em; }
-			.cycle b { display: block; color: #fff; margin-bottom: 0.3em; }
-			.cycle small { display: block; font-size: 0.8em; opacity: 0.8; }
-		</style>
-		
-		
-	</head>
-	<body class="is-preload" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tushar Rana · Automotive Technical Product &amp; Technology</title>
+<meta name="description" content="Automotive diagnostics, vehicle data, backend software and AI-driven vehicle-health products. Portfolio of Tushar Rana, Munich.">
+<meta name="theme-color" content="#0f766e">
+<style>
+:root{
+  --bg:#fafaf9; --card:#ffffff; --text:#1c1917; --muted:#57534e; --line:#e7e5e4;
+  --accent:#0f766e; --accent-soft:#ccfbf1; --accent-text:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c0a09; --card:#1c1917; --text:#f5f5f4; --muted:#a8a29e; --line:#2e2a27;
+        --accent:#5eead4; --accent-soft:#134e4a; --accent-text:#042f2e;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;z-index:20}
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#cycle">The cycle</a></li>
-							<li><a href="#cases">Case studies</a></li>
-							<li><a href="#path">Career path</a></li>
-							<li><a href="#sdv">SDV roadmap</a></li>
-							<li><a href="#two">Skills</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+header.nav b{white-space:nowrap}
+header.nav nav{display:flex;gap:18px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
+header.nav nav a{color:var(--muted);text-decoration:none;font-size:.9rem;white-space:nowrap}
+header.nav nav a:hover{color:var(--accent)}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+/* sections */
+section{padding:64px 0 8px}
+h1,h2,h3{line-height:1.2;margin:0}
+h2{font-size:1.7rem;margin-bottom:.4em}
+.lead{color:var(--muted);max-width:62ch}
+.eyebrow{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.mini{font-size:.9rem;color:var(--muted)}
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<div class="row" style="margin-bottom: 20px;">
-								<div class="image-wrapper">	
-							     <img src="images/tushar_rana_photo_new.jpg" width="150px" alt="" data-position="center center" style="border-radius: 50%;"/>
-								</div>
-							<h1 style="padding-left: 15px; font-size: 60px; margin-top: auto;" class="align-middle">Tushar Rana</h1>
-							</div>
-							<h2 style="margin-bottom:0.5em;">Automotive Technical Product &amp; Technology Professional</h2>
-							<p>I work at the intersection of automotive diagnostics, vehicle data, backend software and AI-driven vehicle-health products. My experience spans hands-on diagnostic communication and data analysis through technical architecture, cross-functional delivery and customer-facing product capabilities.</p>
-							<div class="stats">
-								<div><strong>5+ years</strong><span>Automotive diagnostics &amp; technical delivery</span></div>
-								<div><strong>177k / month</strong><span>Diagnostic reports processed at production scale</span></div>
-								<div><strong>25%</strong><span>Improvement in fault-to-issue matching accuracy</span></div>
-								<div><strong>30%</strong><span>Reduction in diagnostic data-processing time</span></div>
-							</div>
-							<ul class="actions">
-								<li><a href="#cycle" class="button primary scrolly">The full cycle</a></li>
-								<li><a href="#path" class="button scrolly">Career path</a></li>
-							</ul>
-						</div>
-					</section>
+/* hero */
+.hero{padding-top:56px;padding-bottom:0;display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center}
+.hero img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--accent)}
+.hero h1{font-size:2.6rem}
+.role{font-size:1.2rem;color:var(--accent);font-weight:600;margin:.2em 0 .6em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0 22px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font-size:1.7rem;line-height:1.1}
+.stat span{font-size:.85rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid var(--accent);
+  color:var(--accent);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--accent);color:var(--accent-text)}
+@media(max-width:600px){.hero{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
 
-				<!-- Cycle -->
-					<section id="cycle" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>One cycle, end to end</h2>
-							<p>From the vehicle to the customer, I have worked in most of the layers in between. Most engineers know one of them; knowing how they connect is what lets me turn a raw ECU response into something a driver can act on. Each stage links to the work behind it.</p>
-							<ol class="cycle">
-								<li><a href="#path"><b>1 &middot; Vehicle &amp; repair</b>How cars are built, serviced and fail<small>Automotive engineering, Hyundai service</small></a></li>
-								<li><a href="#case-4"><b>2 &middot; ECU, CAN &amp; UDS</b>Talking to the car<small>Tesla, Nissan, Volvo, Chevrolet</small></a></li>
-								<li><a href="#case-5"><b>3 &middot; Diagnostic data</b>DTC definitions and XML data<small>Tesla DTC database, DDC metadata</small></a></li>
-								<li><a href="#case-1"><b>4 &middot; Apps</b>Where the output lands<small>Android and iOS diagnostic apps</small></a></li>
-								<li><a href="#case-3"><b>5 &middot; Backend &amp; data</b>Pipelines and APIs at scale<small>Python, AWS Lambda, MongoDB, Elasticsearch</small></a></li>
-								<li><a href="#case-2"><b>6 &middot; AI matching</b>Faults to standardized issues<small>TF-IDF to fine-tuned SBERT to LLM fallback</small></a></li>
-								<li><a href="#case-8"><b>7 &middot; Content &amp; languages</b>Repair knowledge in every market<small>Kontent.ai, Lokalise, SEO</small></a></li>
-								<li><a href="#case-1"><b>8 &middot; Customer</b>Vehicle health they understand<small>Fault, issue, severity, repair cost</small></a></li>
-							</ol>
-							<p>Running through every stage: <a href="#case-6">technical product and program leadership</a>.</p>
-						</div>
-					</section>
+/* cycle */
+.cycle{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.cycle a{display:block;height:100%;text-decoration:none;color:inherit;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .15s,transform .15s}
+.cycle a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cycle i{font-style:normal;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--accent-soft);color:var(--accent);font-size:.8rem;font-weight:700;margin-bottom:6px}
+.cycle b{display:block}
+.cycle small{color:var(--muted);display:block;line-height:1.4;margin-top:2px}
 
-				<!-- Case studies -->
-					<section id="cases" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Case studies</h2>
-							<p>Selected work from Carly, where I turn raw vehicle diagnostics into customer-facing vehicle-health products. Diagrams are conceptual and contain no proprietary data.</p>
+/* flow chips: <ol class="flow"><li><span>step</span></li>…</ol> */
+.flow{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px 0;padding:0;margin:14px 0}
+.flow li{display:inline-flex;align-items:center}
+.flow li+li::before{content:"→";color:var(--accent);font-weight:700;margin:0 8px}
+.flow span{background:var(--accent-soft);border-radius:8px;padding:4px 10px;font-size:.88rem;font-weight:500}
 
-							<div class="case" id="case-1">
-								<h3>01 &mdash; Building intelligent vehicle health from automotive diagnostic data</h3>
-								<p><strong>Problem.</strong> Raw diagnostics are not directly useful to customers. A DTC or ECU response has to become something a driver can act on: fault &rarr; technical interpretation &rarr; issue &rarr; severity &rarr; repair implication &rarr; customer action.</p>
-								<p class="flow">Vehicle / ECU &rarr; Diagnostic session &rarr; DTC / raw diagnostic data &rarr; Data processing &rarr; Fault normalization &rarr; Fault-to-issue mapping &rarr; Severity &rarr; Repair-cost estimate &rarr; Vehicle-health result &rarr; Mobile / Web / Backend</p>
-								<p><strong>My contribution.</strong> Investigated DTCs and diagnostic definitions, designed the post-diagnostic processing architecture, coordinated the technical requirements, and helped establish consistent downstream outputs with data quality and customer impact in mind.</p>
-								<p><strong>Results.</strong> 25% improvement in fault-to-issue matching accuracy &middot; 30% reduction in diagnostic data-processing time &middot; production workload of roughly 177,000 diagnostic reports per month.</p>
-							</div>
+/* case studies */
+details.case{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:14px 0;overflow:hidden}
+details.case summary{cursor:pointer;list-style:none;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+details.case summary::-webkit-details-marker{display:none}
+details.case summary::after{content:"+";margin-left:auto;font-size:1.4rem;line-height:1;color:var(--accent)}
+details.case[open] summary::after{content:"–"}
+.num{font-weight:700;color:var(--accent);min-width:2ch}
+.ctitle{font-weight:650;font-size:1.05rem;line-height:1.35}
+.cdesc{display:block;color:var(--muted);font-size:.92rem;font-weight:400;margin-top:2px}
+.cbody{padding:0 20px 20px;border-top:1px solid var(--line)}
+.cbody h4{margin:18px 0 4px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.cbody p{margin:0 0 6px}
+.cbody ol:not(.flow),.cbody ul{margin:4px 0 6px;padding-left:1.3em}
+.par{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.par span{border:1px dashed var(--accent);border-radius:8px;padding:4px 10px;font-size:.88rem}
+.tree{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;line-height:1.5;background:var(--bg);
+  border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;white-space:pre;margin-top:12px}
 
-							<div class="case" id="case-2">
-								<h3>02 &mdash; AI-assisted diagnostic fault-to-issue matching</h3>
-								<p>Designed and evaluated a multi-stage AI pipeline combining semantic retrieval, embedding-based matching, CrossEncoder reranking and optional LLM adjudication to improve diagnostic fault classification.</p>
-								<p class="flow">Diagnostic fault &rarr; Rule / classifier &rarr; SBERT retrieval &rarr; CrossEncoder reranking &rarr; Confidence threshold &rarr; LLM adjudication &rarr; Standardized issue</p>
-								<p><strong>Why not simply an LLM?</strong> At production volume the trade-offs matter: accuracy, latency, cost, explainability, confidence and scalability. Deterministic and embedding-based stages handle the clear cases cheaply and reproducibly; the LLM is only consulted when confidence is low.</p>
-								<p><strong>Result.</strong> 25% improvement in matching accuracy, mapping faults to ~193 standardized repair categories.</p>
-							</div>
+/* timeline */
+.timeline{list-style:none;margin:28px 0 0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.timeline li{position:relative;margin:0 0 30px}
+.timeline li::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg)}
+.when{font-size:.82rem;color:var(--accent);font-weight:600;letter-spacing:.04em}
+.timeline h3{font-size:1.15rem;margin:2px 0 6px}
+.timeline p{margin:0 0 6px;color:var(--muted)}
+.timeline p strong{color:var(--text)}
 
-							<div class="case" id="case-3">
-								<h3>03 &mdash; Centralized post-diagnostic processing architecture</h3>
-								<p><strong>Why it was needed.</strong> Duplicated logic, inconsistent outputs across multiple consumers, difficult maintenance and inconsistent diagnostic interpretation.</p>
-<pre><code>              Diagnostic input
-                     |
-              Fault processing
-                     |
-      +--------------+--------------+
-      |              |              |
-Fault -> Issue    Severity    Cost estimate
-      |              |              |
-      +--------------+--------------+
-                     |
-             Aggregator / API
-                     |
-          Mobile / Web / Backend</code></pre>
-								<p><strong>Architectural thinking.</strong> Centralization, reusable services, API contracts, a single source of truth, separation of concerns, scalability and consistency &mdash; systems that turn diagnostic data into reusable vehicle-health capabilities.</p>
-							</div>
+/* roadmap */
+.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px}
+.level{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.level.now{border-color:var(--accent)}
+.level b{display:block;margin-bottom:4px}
+.level small{display:block;color:var(--accent);font-weight:600;margin-bottom:4px}
+.level p{margin:0;color:var(--muted);font-size:.92rem}
 
-							<div class="case" id="case-4">
-								<h3>04 &mdash; End-to-end diagnostic communication investigation (CAN / ECU)</h3>
-								<p class="flow">Diagnostic tester &rarr; CAN &rarr; ECUs &rarr; Diagnostic response &rarr; Parsing / processing &rarr; Vehicle health</p>
-								<p>A representative investigation:</p>
-								<ol>
-									<li>Unexpected or missing diagnostic result observed</li>
-									<li>Diagnostic session examined</li>
-									<li>CAN communication captured</li>
-									<li>ECU addressing checked</li>
-									<li>Request / response behavior examined</li>
-									<li>Raw ECU response inspected</li>
-									<li>Diagnostic definition checked</li>
-									<li>Parsing / processing logic investigated</li>
-									<li>Root cause isolated</li>
-									<li>Corrective action validated</li>
-								</ol>
-								<p>Protocols and tools: CAN, UDS / ISO 14229, KWP, OBD, Bosch KTS, CAN sniffers.</p>
-							</div>
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:20px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.skill h3{font-size:1rem;margin-bottom:10px}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{background:var(--accent-soft);border-radius:999px;padding:2px 10px;font-size:.82rem}
 
-							<div class="case" id="case-5">
-								<h3>05 &mdash; Working with structured automotive diagnostic data</h3>
-								<p>XML-based automotive diagnostic data describing ECU information, DTC definitions, diagnostic services, request / response structures, parameters, data types and vehicle / ECU configuration.</p>
-<pre><code>ECU
- |-- Diagnostic services
- |    |-- Read data
- |    |-- Read DTC
- |    `-- Clear DTC
- |-- DTC definitions
- `-- Request / Response
-      |-- Parameters
-      `-- Data types</code></pre>
-							</div>
+footer{padding:64px 0 48px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-							<div class="case" id="case-6">
-								<h3>06 &mdash; Technical product / program leadership</h3>
-								<p class="flow">Customer / product need &rarr; Requirements &rarr; Technical analysis &rarr; Architecture / solution options &rarr; Prioritization &rarr; Engineering coordination &rarr; Validation &rarr; Release / rollout &rarr; Measurement &rarr; Iteration</p>
-								<p>Across this cycle I clarify requirements, prioritize, track dependencies and technical risks, align stakeholders, coordinate backend, mobile, web, data and AI engineering, validate and roll out, then evaluate KPIs and customer impact &mdash; translating technical problems into product decisions.</p>
-							</div>
+<header class="nav">
+  <div class="wrap">
+    <b>Tushar Rana</b>
+    <nav aria-label="Sections">
+      <a href="#cycle">Cycle</a><a href="#cases">Case studies</a><a href="#path">Career</a>
+      <a href="#sdv">SDV roadmap</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-							<div class="case" id="case-7">
-								<h3>07 &mdash; Automotive diagnostic data at production scale</h3>
-								<p class="flow">Diagnostic reports (~177k / month) &rarr; Ingestion &rarr; Validation &rarr; Normalization &rarr; Analytics &rarr; Diagnostic intelligence &rarr; Vehicle health</p>
-								<p><strong>Analyses.</strong> DTC frequency, ECU grouping, missing fault information, standard vs non-standard codes, vehicle / model comparisons, session-level metrics, fault patterns and downstream impact.</p>
-								<p><strong>Tools.</strong> Python &middot; SQL &middot; MongoDB &middot; Elasticsearch &middot; Kibana &middot; AWS</p>
-							</div>
+<main id="main" class="wrap">
 
-							<div class="case" id="case-8">
-								<h3>08 &mdash; Multilingual repair content and localization pipelines</h3>
-								<p class="flow">Source content &rarr; Kontent.ai &rarr; Validation &rarr; Versioned delivery &rarr; Web / app in every market</p>
-								<p>Scripts and pipelines that move repair and maintenance knowledge into Kontent.ai, check translations and missing Lokalise keys, generate web-content JSON per language (English, German, French, Italian, Spanish, later Polish and Portuguese), and produce SEO headlines and community topic mappings &mdash; so the same vehicle-health result reads correctly in each market.</p>
-							</div>
-						</div>
-					</section>
+<!-- Hero -->
+<section class="hero">
+  <img src="images/tushar_rana_480.jpg" width="150" height="150" alt="Portrait of Tushar Rana">
+  <div>
+    <div class="eyebrow">Munich, Germany</div>
+    <h1>Tushar Rana</h1>
+    <p class="role">Automotive Technical Product &amp; Technology Professional</p>
+    <p class="lead">I work at the intersection of automotive diagnostics, vehicle data, backend software and AI-driven vehicle-health products. My experience spans hands-on diagnostic communication and data analysis through technical architecture, cross-functional delivery and customer-facing product capabilities.</p>
+  </div>
+</section>
+<div class="stats">
+  <div class="stat"><b>5+ years</b><span>Automotive diagnostics &amp; technical delivery</span></div>
+  <div class="stat"><b>177k / month</b><span>Diagnostic reports processed at production scale</span></div>
+  <div class="stat"><b>25%</b><span>Better fault-to-issue matching accuracy</span></div>
+  <div class="stat"><b>30%</b><span>Less diagnostic data-processing time</span></div>
+</div>
+<div class="links">
+  <a class="btn primary" href="#cycle">See the full cycle</a>
+  <a class="btn" href="#cases">Case studies</a>
+  <a class="btn" href="https://www.linkedin.com/in/tushar-rana-8207116a">LinkedIn</a>
+  <a class="btn" href="https://github.com/Tusharana03">GitHub</a>
+</div>
 
-				<!-- Career path -->
-					<section id="path" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>How it connects: my career path</h2>
+<!-- Cycle -->
+<section id="cycle">
+  <h2>One cycle, end to end</h2>
+  <p class="lead">From the vehicle to the customer, I have worked in most of the layers in between. Knowing how they connect is what lets me turn a raw ECU response into something a driver can act on. Each stage links to the work behind it.</p>
+  <ol class="cycle">
+    <li><a href="#path"><i>1</i><b>Vehicle &amp; repair</b><small>How cars are built, serviced and fail</small></a></li>
+    <li><a href="#case-4" data-open="case-4"><i>2</i><b>ECU, CAN &amp; UDS</b><small>Talking to the car: Tesla, Nissan, Volvo, Chevrolet</small></a></li>
+    <li><a href="#case-5" data-open="case-5"><i>3</i><b>Diagnostic data</b><small>DTC definitions, XML data, Tesla DTC database</small></a></li>
+    <li><a href="#case-1" data-open="case-1"><i>4</i><b>Apps</b><small>Where the output lands: Android and iOS</small></a></li>
+    <li><a href="#case-3" data-open="case-3"><i>5</i><b>Backend &amp; data</b><small>Python, AWS Lambda, MongoDB, Elasticsearch</small></a></li>
+    <li><a href="#case-2" data-open="case-2"><i>6</i><b>AI matching</b><small>Faults to standardized issues</small></a></li>
+    <li><a href="#case-8" data-open="case-8"><i>7</i><b>Content &amp; languages</b><small>Kontent.ai, Lokalise, SEO</small></a></li>
+    <li><a href="#case-1" data-open="case-1"><i>8</i><b>Customer</b><small>Vehicle health they understand</small></a></li>
+  </ol>
+  <p class="mini">Running through every stage: <a href="#case-6" data-open="case-6">technical product and program leadership</a>.</p>
+</section>
 
-							<h3>1 &mdash; The vehicle and repair reality (2014&ndash;2019)</h3>
-							<p>B.Tech in Automobile Engineering (SRM), electrical systems for the Infieon Supermileage team (Shell Eco-marathon), supplier technical assistance at SMR Automotive, and process development at Sun Vacuum Formers. At Hyundai Motor India I was an intern and then a Customer Service Specialist: analysing customer complaints, testing vehicles and checking the quality of repair work. This is where I learned what a fault means to the person standing next to the car &mdash; the base of today's severity and repair-cost logic.</p>
+<!-- Case studies -->
+<section id="cases">
+  <h2>Case studies</h2>
+  <p class="lead">Selected work from Carly, where I turn raw vehicle diagnostics into customer-facing vehicle-health products. Diagrams are conceptual and contain no proprietary data. Tap a card to open it.</p>
 
-							<h3>2 &mdash; Vehicle modelling and data-driven methods (2019&ndash;2022)</h3>
-							<p>M.Sc. in Automotive Engineering at Technische Hochschule Ingolstadt. At CARISSMA I worked on crash-scenario simulation (IPG CarMaker, MATLAB/Simulink) and wrote my thesis on a data-driven vehicle dynamics model using SINDy, machine learning and model reduction for model-predictive collision avoidance. University projects: <a href="Python_self_driving.html">self-driving CNN</a> &middot; <a href="Torque_Vectoring.html">torque vectoring</a> &middot; <a href="Electric_vehicle.html">induction-motor drive train</a> &middot; <a href="Electric_Rikshaw.html">e-rickshaw drive train</a> &middot; <a href="ECU_project.html">ECU packing thermal study</a> &middot; <a href="Air_intake.html">air intake system</a>.</p>
+  <details class="case" id="case-1" open>
+    <summary><span class="num">01</span><span class="ctitle">Building intelligent vehicle health from diagnostic data<span class="cdesc">Turning a raw DTC into something a customer can act on</span></span></summary>
+    <div class="cbody">
+      <h4>Problem</h4>
+      <p>Raw diagnostics are not directly useful to customers. A DTC or ECU response has to become something a driver can act on: fault → technical interpretation → issue → severity → repair implication → customer action.</p>
+      <ol class="flow"><li><span>Vehicle / ECU</span></li><li><span>Diagnostic session</span></li><li><span>DTC / raw data</span></li><li><span>Data processing</span></li><li><span>Fault normalization</span></li><li><span>Fault-to-issue mapping</span></li><li><span>Severity</span></li><li><span>Repair-cost estimate</span></li><li><span>Vehicle-health result</span></li><li><span>Mobile / Web / Backend</span></li></ol>
+      <h4>My contribution</h4>
+      <p>Investigated DTCs and diagnostic definitions, designed the post-diagnostic processing architecture, coordinated the technical requirements, and helped establish consistent downstream outputs with data quality and customer impact in mind.</p>
+      <h4>Results</h4>
+      <p>25% better fault-to-issue matching accuracy · 30% less diagnostic data-processing time · roughly 177,000 diagnostic reports per month in production.</p>
+    </div>
+  </details>
 
-							<h3>3 &mdash; Carly: from support to diagnostics research (2021&ndash;2024)</h3>
-							<p>I started in customer success, triaging technical bug tickets, finding root causes and routing them to engineering. As Automotive Product Researcher &amp; Data Analyst I led OBD protocol work for Tesla, Nissan and Volvo (KWP, UDS, CAN, Bosch KTS, CAN sniffers), debugged the diagnostic app's C++ engine and Android Auto integration (&gt;80% diagnostic quality benchmark), built the Tesla DTC database, and built the SBERT fault-to-solution matcher (90%+ solution coverage). In parallel I automated content, translation and SEO pipelines.</p>
+  <details class="case" id="case-2">
+    <summary><span class="num">02</span><span class="ctitle">AI-assisted fault-to-issue matching<span class="cdesc">A multi-stage pipeline instead of “just ask an LLM”</span></span></summary>
+    <div class="cbody">
+      <p style="margin-top:14px">Designed and evaluated a multi-stage AI pipeline combining semantic retrieval, embedding-based matching, CrossEncoder reranking and optional LLM adjudication to improve diagnostic fault classification.</p>
+      <ol class="flow"><li><span>Diagnostic fault</span></li><li><span>Rule / classifier</span></li><li><span>SBERT retrieval</span></li><li><span>CrossEncoder rerank</span></li><li><span>Confidence threshold</span></li><li><span>LLM adjudication</span></li><li><span>Standardized issue</span></li></ol>
+      <h4>Why not simply an LLM?</h4>
+      <p>At production volume the trade-offs matter: accuracy, latency, cost, explainability, confidence and scalability. Deterministic and embedding-based stages handle the clear cases cheaply and reproducibly; the LLM is consulted only when confidence is low. The evolution was TF-IDF baseline → fine-tuned SBERT → reranking → LLM fallback.</p>
+      <h4>Result</h4>
+      <p>25% better matching accuracy, mapping faults to ~193 standardized repair categories.</p>
+    </div>
+  </details>
 
-							<h3>4 &mdash; Carly: backend engineering (Sep 2024&ndash;present)</h3>
-							<p>Python and AWS Lambda services, MongoDB and Elasticsearch pipelines, and report processing for roughly 177,000 diagnostic reports a month; fault-code normalization across CAN, UDS/ISO 14229 and OBD; the multi-stage fault-to-issue matching (~193 standardized repair categories); and versioned, validated Kontent.ai content delivery.</p>
+  <details class="case" id="case-3">
+    <summary><span class="num">03</span><span class="ctitle">Centralized post-diagnostic processing architecture<span class="cdesc">One source of truth for every consumer</span></span></summary>
+    <div class="cbody">
+      <h4>Why it was needed</h4>
+      <p>Duplicated logic, inconsistent outputs across multiple consumers, difficult maintenance and inconsistent diagnostic interpretation.</p>
+      <ol class="flow"><li><span>Diagnostic input</span></li><li><span>Fault processing</span></li><li><span>In parallel ↓</span></li><li><span>Aggregator / API</span></li><li><span>Mobile / Web / Backend</span></li></ol>
+      <div class="par"><span>Fault → Issue</span><span>Severity</span><span>Cost estimate</span></div>
+      <h4>Architectural thinking</h4>
+      <p>Centralization, reusable services, API contracts, a single source of truth, separation of concerns, scalability and consistency: systems that turn diagnostic data into reusable vehicle-health capabilities.</p>
+    </div>
+  </details>
 
-							<h3>5 &mdash; Where it is heading</h3>
-							<p>Diagnostics &rarr; connected vehicle &rarr; software-defined vehicle &rarr; technical leadership. See the <a href="#sdv">SDV roadmap</a>.</p>
+  <details class="case" id="case-4">
+    <summary><span class="num">04</span><span class="ctitle">End-to-end diagnostic communication investigation<span class="cdesc">CAN / ECU root-cause work</span></span></summary>
+    <div class="cbody">
+      <ol class="flow"><li><span>Diagnostic tester</span></li><li><span>CAN</span></li><li><span>ECUs</span></li><li><span>Diagnostic response</span></li><li><span>Parsing / processing</span></li><li><span>Vehicle health</span></li></ol>
+      <h4>A representative investigation</h4>
+      <ol>
+        <li>Unexpected or missing diagnostic result observed</li>
+        <li>Diagnostic session examined</li>
+        <li>CAN communication captured</li>
+        <li>ECU addressing checked</li>
+        <li>Request / response behavior examined</li>
+        <li>Raw ECU response inspected</li>
+        <li>Diagnostic definition checked</li>
+        <li>Parsing / processing logic investigated</li>
+        <li>Root cause isolated</li>
+        <li>Corrective action validated</li>
+      </ol>
+      <p class="mini">Protocols and tools: CAN, UDS / ISO 14229, KWP, OBD, Bosch KTS, CAN sniffers.</p>
+    </div>
+  </details>
 
-							<p><strong>Education:</strong> M.Sc. Automotive Engineering, Technische Hochschule Ingolstadt (2019&ndash;2021); B.Tech. Automobile Engineering, SRM University (2014&ndash;2018).</p>
-						</div>
-					</section>
+  <details class="case" id="case-5">
+    <summary><span class="num">05</span><span class="ctitle">Working with structured automotive diagnostic data<span class="cdesc">XML-based ECU and DTC definitions</span></span></summary>
+    <div class="cbody">
+      <p style="margin-top:14px">XML-based automotive diagnostic data describing ECU information, DTC definitions, diagnostic services, request / response structures, parameters, data types and vehicle / ECU configuration.</p>
+      <div class="tree">ECU
+├── Diagnostic services
+│   ├── Read data
+│   ├── Read DTC
+│   └── Clear DTC
+├── DTC definitions
+└── Request / Response
+    ├── Parameters
+    └── Data types</div>
+    </div>
+  </details>
 
-				<!-- SDV roadmap -->
-					<section id="sdv" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>SDV technology roadmap</h2>
-							<p>Where I am heading: diagnostics &rarr; connected vehicle &rarr; software-defined vehicle &rarr; technical leadership. Level 1 is what I do today; the later levels are what I am actively building, not production experience.</p>
-<pre><code>            SOFTWARE-DEFINED VEHICLE
-                       |
-     +-----------------+-----------------+
-     |                 |                 |
-Vehicle E/E       Connectivity     Cloud platform
-architecture    (Ethernet, SOME/IP) (vehicle data, OTA)
-     |                 |                 |
-     +-----------------+-----------------+
-                       |
-              Vehicle diagnostics
-                       |
-            Vehicle health / data
-                       |
-             Customer experience</code></pre>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-car"></span>
-									<h3>Level 1 &mdash; Current strength</h3>
-									<p>CAN, UDS, OBD, DTCs, ECU diagnostics, diagnostic data, backend, vehicle health.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Level 2 &mdash; Immediate development</h3>
-									<p>DoIP, Automotive Ethernet, SOME/IP, service-oriented architecture, gateways, zonal architecture.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-microchip"></span>
-									<h3>Level 3 &mdash; SDV platform</h3>
-									<p>AUTOSAR Classic and Adaptive, middleware, OTA, vehicle / cloud architecture, software lifecycle.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-bolt"></span>
-									<h3>Level 4 &mdash; Leadership</h3>
-									<p>Safety, cybersecurity, architecture governance, supplier / Tier-1 coordination, technical roadmap, platform strategy.</p>
-								</section>
-							</div>
-						</div>
-					</section>
+  <details class="case" id="case-6">
+    <summary><span class="num">06</span><span class="ctitle">Technical product and program leadership<span class="cdesc">How I run a change from need to measured result</span></span></summary>
+    <div class="cbody">
+      <ol class="flow"><li><span>Customer need</span></li><li><span>Requirements</span></li><li><span>Technical analysis</span></li><li><span>Solution options</span></li><li><span>Prioritization</span></li><li><span>Engineering coordination</span></li><li><span>Validation</span></li><li><span>Rollout</span></li><li><span>Measurement</span></li><li><span>Iteration</span></li></ol>
+      <p>Across this cycle I clarify requirements, prioritize, track dependencies and technical risks, align stakeholders, coordinate backend, mobile, web, data and AI engineering, validate and roll out, then evaluate KPIs and customer impact: translating technical problems into product decisions.</p>
+    </div>
+  </details>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Skills</h2>
-							<p>What I use today, grouped along the vehicle-to-customer cycle.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-car"></span>
-									<h3>Vehicle diagnostics</h3>
-									<p>CAN, UDS / ISO 14229, KWP, OBD-II, DTC analysis, ECU addressing, multi-ECU diagnostics, XML-based diagnostic data, Bosch KTS, CAN sniffers.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-tv"></span>
-									<h3>Diagnostic data &amp; vehicle health</h3>
-									<p>Fault normalization, fault-to-issue mapping, severity classification, repair-cost estimation, diagnostic KPIs and data-quality analysis at ~177k reports a month.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Backend &amp; APIs</h3>
-									<p>Python, REST APIs, JSON, AWS Lambda, Postman, batch and validation pipelines, CI/CD, shared configuration and data contracts.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-microchip"></span>
-									<h3>Data &amp; databases</h3>
-									<p>SQL, MongoDB, Elasticsearch / Kibana, JSON, CSV / Excel pipelines, data migration and content-data modelling.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-bolt"></span>
-									<h3>AI / ML</h3>
-									<p>Fine-tuned SBERT, CrossEncoder reranking, TF-IDF baselines, confidence thresholds, LLM adjudication, synthetic training data, accuracy vs latency and cost trade-offs.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-gamepad"></span>
-									<h3>Content &amp; localization</h3>
-									<p>Kontent.ai, Lokalise, multilingual content pipelines, translation checks, SEO headlines and topic mappings.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Technical product leadership</h3>
-									<p>Requirements, prioritization, roadmap coordination, backend / mobile / web / data / AI alignment, validation and rollout, Jira, customer-impact assessment.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cube"></span>
-									<h3>Vehicle engineering &amp; modelling</h3>
-									<p>MATLAB / Simulink, IPG CarMaker, control design (PID, MPC), electric powertrains, SINDy, ANSYS, SolidWorks and CATIA V5.</p>
-								</section>
-							</div>
-							<p><strong>Developing:</strong> DoIP, Automotive Ethernet, SOME/IP, AUTOSAR, OTA, safety and cybersecurity &mdash; see the <a href="#sdv">SDV roadmap</a>. <strong>Languages:</strong> English (full professional), German (limited working), Hindi (native).</p>
-						</div>
-					</section>
+  <details class="case" id="case-7">
+    <summary><span class="num">07</span><span class="ctitle">Automotive diagnostic data at production scale<span class="cdesc">~177k reports a month through validation and analytics</span></span></summary>
+    <div class="cbody">
+      <ol class="flow"><li><span>Diagnostic reports</span></li><li><span>Ingestion</span></li><li><span>Validation</span></li><li><span>Normalization</span></li><li><span>Analytics</span></li><li><span>Diagnostic intelligence</span></li><li><span>Vehicle health</span></li></ol>
+      <h4>Analyses</h4>
+      <p>DTC frequency, ECU grouping, missing fault information, standard vs non-standard codes, vehicle / model comparisons, session-level metrics, fault patterns and downstream impact.</p>
+      <p class="mini">Python · SQL · MongoDB · Elasticsearch · Kibana · AWS</p>
+    </div>
+  </details>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>I look forward to hearing from you and am always available to answer your questions.</p>
-							<div>
-								<!-- <section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section> -->
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a href="#">Tusharana03@gmail.com</a>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://www.linkedin.com/in/tushar-rana-8207116a" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://github.com/Tusharana03" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											</ul>
-										</li>
-									</ul>
-							</div>
-						</div>
-					</section>
+  <details class="case" id="case-8">
+    <summary><span class="num">08</span><span class="ctitle">Multilingual repair content and localization pipelines<span class="cdesc">The same vehicle-health result, correct in every market</span></span></summary>
+    <div class="cbody">
+      <ol class="flow"><li><span>Source content</span></li><li><span>Kontent.ai</span></li><li><span>Validation</span></li><li><span>Versioned delivery</span></li><li><span>Web / app in every market</span></li></ol>
+      <p>Pipelines that move repair and maintenance knowledge into Kontent.ai, check translations and missing Lokalise keys, generate web-content JSON per language (English, German, French, Italian, Spanish, later Polish and Portuguese), and produce SEO headlines and community topic mappings.</p>
+    </div>
+  </details>
+</section>
 
-			</div>
+<!-- Career path -->
+<section id="path">
+  <h2>How it connects: my career path</h2>
+  <p class="lead">Each stage taught me something the next one needed.</p>
+  <ol class="timeline">
+    <li>
+      <div class="when">2014 – 2019</div>
+      <h3>The vehicle and repair reality</h3>
+      <p>B.Tech in Automobile Engineering (SRM), electrical systems for the Infieon Supermileage team (Shell Eco-marathon), supplier technical assistance at SMR Automotive, process development at Sun Vacuum Formers. At Hyundai Motor India I was an intern and then Customer Service Specialist: analysing customer complaints, testing vehicles and checking the quality of repair work.</p>
+      <p><strong>What it gave me:</strong> an understanding of what a fault means to the person standing next to the car, the base of today's severity and repair-cost logic.</p>
+    </li>
+    <li>
+      <div class="when">2019 – 2022</div>
+      <h3>Vehicle modelling and data-driven methods</h3>
+      <p>M.Sc. in Automotive Engineering at Technische Hochschule Ingolstadt. At CARISSMA: crash-scenario simulation (IPG CarMaker, MATLAB/Simulink) and a thesis on a data-driven vehicle dynamics model using SINDy, machine learning and model reduction for model-predictive collision avoidance.</p>
+      <p class="mini">University projects covered self-driving CNNs, torque vectoring, electric drive trains and thermal / air-intake design.</p>
+    </li>
+    <li>
+      <div class="when">2021 – 2024 · Carly</div>
+      <h3>From support to diagnostics research</h3>
+      <p>Started in customer success, triaging technical bug tickets and routing root causes to engineering. As Automotive Product Researcher &amp; Data Analyst I led OBD protocol work for Tesla, Nissan and Volvo (KWP, UDS, CAN, Bosch KTS, CAN sniffers), debugged the diagnostic app's C++ engine and Android Auto integration (&gt;80% diagnostic quality benchmark), built the Tesla DTC database and the SBERT fault-to-solution matcher (90%+ solution coverage), and automated content, translation and SEO pipelines.</p>
+    </li>
+    <li>
+      <div class="when">Sep 2024 – today · Carly</div>
+      <h3>Backend engineering</h3>
+      <p>Python and AWS Lambda services, MongoDB and Elasticsearch pipelines and report processing for ~177,000 diagnostic reports a month; fault-code normalization across CAN, UDS / ISO 14229 and OBD; multi-stage fault-to-issue matching (~193 standardized repair categories); versioned, validated Kontent.ai content delivery.</p>
+    </li>
+    <li>
+      <div class="when">Next</div>
+      <h3>Connected vehicle → software-defined vehicle → technical leadership</h3>
+      <p>See the roadmap below.</p>
+    </li>
+  </ol>
+  <p class="mini"><strong>Education:</strong> M.Sc. Automotive Engineering, Technische Hochschule Ingolstadt (2019–2021) · B.Tech. Automobile Engineering, SRM University (2014–2018)</p>
+</section>
 
-			<!-- Footer -->
-				<footer id="footer" class="wrapper alt">
-					<div class="inner">
-						<ul class="menu">
-							<li>&copy; All rights reserved.</li>
-						</ul>
-					</div>
-				</footer>
+<!-- SDV roadmap -->
+<section id="sdv">
+  <h2>SDV technology roadmap</h2>
+  <p class="lead">Where I am heading. Level 1 is what I do today; the later levels are what I am actively building, not production experience.</p>
+  <ol class="flow"><li><span>Vehicle E/E architecture</span></li><li><span>Connectivity (Ethernet, SOME/IP)</span></li><li><span>Cloud platform (vehicle data, OTA)</span></li><li><span>Vehicle diagnostics</span></li><li><span>Vehicle health / data</span></li><li><span>Customer experience</span></li></ol>
+  <div class="levels">
+    <div class="level now"><small>Level 1 · current strength</small><b>Diagnostics &amp; data</b><p>CAN, UDS, OBD, DTCs, ECU diagnostics, diagnostic data, backend, vehicle health.</p></div>
+    <div class="level"><small>Level 2 · immediate development</small><b>Vehicle networks</b><p>DoIP, Automotive Ethernet, SOME/IP, service-oriented architecture, gateways, zonal architecture.</p></div>
+    <div class="level"><small>Level 3 · SDV platform</small><b>Platform software</b><p>AUTOSAR Classic and Adaptive, middleware, OTA, vehicle / cloud architecture, software lifecycle.</p></div>
+    <div class="level"><small>Level 4 · leadership</small><b>Technical leadership</b><p>Safety, cybersecurity, architecture governance, supplier / Tier-1 coordination, roadmap, platform strategy.</p></div>
+  </div>
+</section>
 
-		<!-- Scripts -->
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="lead">What I use today, grouped along the vehicle-to-customer cycle.</p>
+  <div class="skills">
+    <div class="skill"><h3>Vehicle diagnostics</h3><ul class="tags"><li>CAN</li><li>UDS / ISO 14229</li><li>KWP</li><li>OBD-II</li><li>DTC analysis</li><li>ECU addressing</li><li>XML diagnostic data</li><li>Bosch KTS</li><li>CAN sniffers</li></ul></div>
+    <div class="skill"><h3>Diagnostic data &amp; vehicle health</h3><ul class="tags"><li>Fault normalization</li><li>Fault-to-issue mapping</li><li>Severity classification</li><li>Repair-cost estimation</li><li>Data-quality analysis</li><li>Diagnostic KPIs</li></ul></div>
+    <div class="skill"><h3>Backend &amp; APIs</h3><ul class="tags"><li>Python</li><li>REST APIs</li><li>JSON</li><li>AWS Lambda</li><li>Postman</li><li>Batch &amp; validation pipelines</li><li>CI/CD</li><li>Data contracts</li></ul></div>
+    <div class="skill"><h3>Data &amp; databases</h3><ul class="tags"><li>SQL</li><li>MongoDB</li><li>Elasticsearch</li><li>Kibana</li><li>JSON / CSV / Excel pipelines</li><li>Data migration</li></ul></div>
+    <div class="skill"><h3>AI / ML</h3><ul class="tags"><li>Fine-tuned SBERT</li><li>CrossEncoder reranking</li><li>TF-IDF baselines</li><li>Confidence thresholds</li><li>LLM adjudication</li><li>Synthetic training data</li><li>Accuracy vs latency / cost</li></ul></div>
+    <div class="skill"><h3>Content &amp; localization</h3><ul class="tags"><li>Kontent.ai</li><li>Lokalise</li><li>Multilingual pipelines</li><li>Translation checks</li><li>SEO headlines</li></ul></div>
+    <div class="skill"><h3>Technical product leadership</h3><ul class="tags"><li>Requirements</li><li>Prioritization</li><li>Roadmap coordination</li><li>Cross-team alignment</li><li>Validation &amp; rollout</li><li>Jira</li><li>Customer-impact assessment</li></ul></div>
+    <div class="skill"><h3>Vehicle engineering &amp; modelling</h3><ul class="tags"><li>MATLAB / Simulink</li><li>IPG CarMaker</li><li>PID / MPC</li><li>Electric powertrains</li><li>SINDy</li><li>ANSYS</li><li>SolidWorks</li><li>CATIA V5</li></ul></div>
+  </div>
+  <p class="mini" style="margin-top:18px"><strong>Developing:</strong> DoIP, Automotive Ethernet, SOME/IP, AUTOSAR, OTA, safety and cybersecurity. <strong>Languages:</strong> English (full professional), German (limited working), Hindi (native).</p>
+</section>
 
-	</body>
+<!-- Contact -->
+<section id="contact">
+  <h2>Get in touch</h2>
+  <p class="lead">Open to conversations about automotive diagnostics, connected vehicle and technical product roles.</p>
+  <div class="links">
+    <a class="btn primary" href="mailto:tusharana03@gmail.com">tusharana03@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/tushar-rana-8207116a">LinkedIn</a>
+    <a class="btn" href="https://github.com/Tusharana03">GitHub</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Tushar Rana</div></footer>
+
+<script>
+// Open the case study a link points to (cycle cards, direct links).
+function openFromHash(){
+  var el=document.getElementById(location.hash.slice(1));
+  if(el&&el.tagName==="DETAILS"){el.open=true;}
+}
+addEventListener("hashchange",openFromHash);
+openFromHash();
+document.querySelectorAll("[data-open]").forEach(function(a){
+  a.addEventListener("click",function(){document.getElementById(a.dataset.open).open=true;});
+});
+</script>
+</body>
 </html>
