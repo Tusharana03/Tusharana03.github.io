@@ -22,7 +22,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Projects</a></li>
+							<li><a href="#exp">Experience</a></li>
+							<li><a href="#one">University projects</a></li>
 							<li><a href="#two">Skills</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
@@ -42,11 +43,40 @@
 								</div>
 							<h1 style="padding-left: 15px; font-size: 60px; margin-top: auto;" class="align-middle">Tushar Rana</h1>
 							</div>
-							<p>Welcome to my Portfolio, I am a Master's student who is driven by the passion to develop solutions for the future of Mobility. </a><br />
-							 Moving forward you will get a detailed view on my Projects and Skills</a>.</p>
+							<p>Backend Engineer and automotive diagnostics specialist in Munich. Over 5 years at Carly I have built Python/AWS data pipelines, multi-ECU diagnostics (CAN, UDS, KWP) and AI-driven fault-to-solution matching for connected-vehicle products.<br />
+							 Below: my professional experience, university projects and skills.</p>
 							<ul class="actions">
 								<li><a href="assets/resume/Tushar_Rana_Lebenslauf.pdf" class="button scrolly">Resume</a></li>
+								<li><a href="#exp" class="button scrolly">Experience</a></li>
 							</ul>
+						</div>
+					</section>
+
+				<!-- Experience -->
+					<section id="exp" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Experience</h2>
+							<h3>Carly &mdash; Backend Engineer <small>(Sep 2024 &ndash; present, Munich)</small></h3>
+							<ul>
+								<li>Python backend services and data pipelines for ~177,000 diagnostic reports per month, with quality metrics that catch missing, malformed or inconsistent data.</li>
+								<li>AI-assisted fault-to-issue matching (semantic retrieval, CrossEncoder reranking, confidence thresholds, LLM selection) mapping vehicle faults to ~193 standardized repair categories.</li>
+								<li>Fault-code interpretation and normalization across CAN, UDS/ISO 14229, OBD and DTC structures; brand-specific diagnostic data.</li>
+								<li>REST APIs and AWS-hosted workflows; MongoDB and Elasticsearch pipelines.</li>
+								<li>Multilingual repair content from Kontent.ai delivered through versioned pipelines with automated validation before production.</li>
+							</ul>
+							<h3>Carly &mdash; Automotive Product Researcher &amp; Data Analyst <small>(May 2021 &ndash; Aug 2024, Munich)</small></h3>
+							<ul>
+								<li>Led OBD protocol work for brands such as Tesla, Nissan and Volvo (KWP, UDS, CAN) using Bosch KTS and CAN sniffers.</li>
+								<li>Debugged diagnostic app integration with the C++ engine and Android Auto; ensured a &gt;80% diagnostic quality benchmark.</li>
+								<li>Built an SBERT / cosine-similarity fault-to-solution matcher reaching 90%+ solution coverage, plus a symptom-based issue prediction system.</li>
+							</ul>
+							<h3>Carly &mdash; Customer Success Manager <small>(Oct 2021 &ndash; Apr 2022)</small></h3>
+							<p>Triaged technical bug tickets, found root causes and routed them to engineering; shortened resolution cycles.</p>
+							<h3>CARISSMA, Technische Hochschule Ingolstadt &mdash; Master's thesis &amp; research assistant <small>(2021&ndash;2022)</small></h3>
+							<p>Data-driven vehicle dynamics model (SINDy, machine learning, model reduction) for a model-predictive collision-avoidance framework; crash-scenario simulation with IPG CarMaker and MATLAB/Simulink.</p>
+							<h3>Earlier</h3>
+							<p>Hyundai Motor Company (Customer Service Specialist, 2018&ndash;19) &middot; SMR Automotive (supplier technical assistance, 2018) &middot; Infieon Supermileage (Electrical Engineer, 2014&ndash;16).</p>
+							<p><strong>Education:</strong> Master's degree, Automotive Engineering, Technische Hochschule Ingolstadt (2019&ndash;2021); B.Tech. Automobile Engineering, SRM University (2014&ndash;2018).</p>
 						</div>
 					</section>
 
@@ -131,8 +161,23 @@
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Skills </h2>
-							<p>Through the Projects mentioned above, I have aquired the following skills -</p>
+							<p>From my work at Carly and my university projects -</p>
 							<div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Backend &amp; data engineering</h3>
+									<p>Python, REST APIs, AWS Lambda, MongoDB, Elasticsearch, Git-based deployment, data-quality pipelines.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-microchip"></span>
+									<h3>Vehicle diagnostics</h3>
+									<p>OBD-II, CAN, UDS/ISO 14229, KWP, DTC analysis, multi-ECU diagnostics, Bosch KTS.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-tv"></span>
+									<h3>AI / ML</h3>
+									<p>SBERT embeddings, CrossEncoder reranking, LLM-based selection, prompt engineering.</p>
+								</section>
 								<section>
 									<span class="icon solid major fa-code"></span>
 									<h3>MATLAB/Simulink</h3>
@@ -181,7 +226,7 @@
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
-							<p>I am at your disposal immediately. I look forward to hearing from you and am always available to answer your questions.</p>
+							<p>I look forward to hearing from you and am always available to answer your questions.</p>
 							<div>
 								<!-- <section>
 									<form method="post" action="#">
