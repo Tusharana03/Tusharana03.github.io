@@ -11,6 +11,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.stats { display: flex; flex-wrap: wrap; gap: 1.5em 2.5em; margin: 0 0 2em 0; }
+			.stats div { flex: 1 1 9em; max-width: 14em; }
+			.stats strong { display: block; font-size: 1.9em; line-height: 1.2; color: #fff; }
+			.stats span { font-size: 0.85em; }
+			.flow { font-weight: bold; color: #fff; line-height: 2; }
+			.case { margin-bottom: 3.5em; }
+			.case pre { overflow-x: auto; }
+			.case pre code { line-height: 1.35; }
+		</style>
 		
 		
 	</head>
@@ -22,6 +32,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#cases">Case studies</a></li>
+							<li><a href="#sdv">SDV roadmap</a></li>
 							<li><a href="#exp">Experience</a></li>
 							<li><a href="#one">University projects</a></li>
 							<li><a href="#two">Skills</a></li>
@@ -43,12 +55,151 @@
 								</div>
 							<h1 style="padding-left: 15px; font-size: 60px; margin-top: auto;" class="align-middle">Tushar Rana</h1>
 							</div>
-							<p>Backend Engineer and automotive diagnostics specialist in Munich. Over 5 years at Carly I have built Python/AWS data pipelines, multi-ECU diagnostics (CAN, UDS, KWP) and AI-driven fault-to-solution matching for connected-vehicle products.<br />
-							 Below: my professional experience, university projects and skills.</p>
+							<h2 style="margin-bottom:0.5em;">Automotive Technical Product &amp; Technology Professional</h2>
+							<p>I work at the intersection of automotive diagnostics, vehicle data, backend software and AI-driven vehicle-health products. My experience spans hands-on diagnostic communication and data analysis through technical architecture, cross-functional delivery and customer-facing product capabilities.</p>
+							<div class="stats">
+								<div><strong>5+ years</strong><span>Automotive diagnostics &amp; technical delivery</span></div>
+								<div><strong>177k / month</strong><span>Diagnostic reports processed at production scale</span></div>
+								<div><strong>25%</strong><span>Improvement in fault-to-issue matching accuracy</span></div>
+								<div><strong>30%</strong><span>Reduction in diagnostic data-processing time</span></div>
+							</div>
 							<ul class="actions">
-								<li><a href="assets/resume/Tushar_Rana_Lebenslauf.pdf" class="button scrolly">Resume</a></li>
+								<li><a href="#cases" class="button primary scrolly">Case studies</a></li>
 								<li><a href="#exp" class="button scrolly">Experience</a></li>
 							</ul>
+						</div>
+					</section>
+
+				<!-- Case studies -->
+					<section id="cases" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Case studies</h2>
+							<p>Selected work from Carly, where I turn raw vehicle diagnostics into customer-facing vehicle-health products. Diagrams are conceptual and contain no proprietary data.</p>
+
+							<div class="case">
+								<h3>01 &mdash; Building intelligent vehicle health from automotive diagnostic data</h3>
+								<p><strong>Problem.</strong> Raw diagnostics are not directly useful to customers. A DTC or ECU response has to become something a driver can act on: fault &rarr; technical interpretation &rarr; issue &rarr; severity &rarr; repair implication &rarr; customer action.</p>
+								<p class="flow">Vehicle / ECU &rarr; Diagnostic session &rarr; DTC / raw diagnostic data &rarr; Data processing &rarr; Fault normalization &rarr; Fault-to-issue mapping &rarr; Severity &rarr; Repair-cost estimate &rarr; Vehicle-health result &rarr; Mobile / Web / Backend</p>
+								<p><strong>My contribution.</strong> Investigated DTCs and diagnostic definitions, designed the post-diagnostic processing architecture, coordinated the technical requirements, and helped establish consistent downstream outputs with data quality and customer impact in mind.</p>
+								<p><strong>Results.</strong> 25% improvement in fault-to-issue matching accuracy &middot; 30% reduction in diagnostic data-processing time &middot; production workload of roughly 177,000 diagnostic reports per month.</p>
+							</div>
+
+							<div class="case">
+								<h3>02 &mdash; AI-assisted diagnostic fault-to-issue matching</h3>
+								<p>Designed and evaluated a multi-stage AI pipeline combining semantic retrieval, embedding-based matching, CrossEncoder reranking and optional LLM adjudication to improve diagnostic fault classification.</p>
+								<p class="flow">Diagnostic fault &rarr; Rule / classifier &rarr; SBERT retrieval &rarr; CrossEncoder reranking &rarr; Confidence threshold &rarr; LLM adjudication &rarr; Standardized issue</p>
+								<p><strong>Why not simply an LLM?</strong> At production volume the trade-offs matter: accuracy, latency, cost, explainability, confidence and scalability. Deterministic and embedding-based stages handle the clear cases cheaply and reproducibly; the LLM is only consulted when confidence is low.</p>
+								<p><strong>Result.</strong> 25% improvement in matching accuracy, mapping faults to ~193 standardized repair categories.</p>
+							</div>
+
+							<div class="case">
+								<h3>03 &mdash; Centralized post-diagnostic processing architecture</h3>
+								<p><strong>Why it was needed.</strong> Duplicated logic, inconsistent outputs across multiple consumers, difficult maintenance and inconsistent diagnostic interpretation.</p>
+<pre><code>              Diagnostic input
+                     |
+              Fault processing
+                     |
+      +--------------+--------------+
+      |              |              |
+Fault -> Issue    Severity    Cost estimate
+      |              |              |
+      +--------------+--------------+
+                     |
+             Aggregator / API
+                     |
+          Mobile / Web / Backend</code></pre>
+								<p><strong>Architectural thinking.</strong> Centralization, reusable services, API contracts, a single source of truth, separation of concerns, scalability and consistency &mdash; systems that turn diagnostic data into reusable vehicle-health capabilities.</p>
+							</div>
+
+							<div class="case">
+								<h3>04 &mdash; End-to-end diagnostic communication investigation (CAN / ECU)</h3>
+								<p class="flow">Diagnostic tester &rarr; CAN &rarr; ECUs &rarr; Diagnostic response &rarr; Parsing / processing &rarr; Vehicle health</p>
+								<p>A representative investigation:</p>
+								<ol>
+									<li>Unexpected or missing diagnostic result observed</li>
+									<li>Diagnostic session examined</li>
+									<li>CAN communication captured</li>
+									<li>ECU addressing checked</li>
+									<li>Request / response behavior examined</li>
+									<li>Raw ECU response inspected</li>
+									<li>Diagnostic definition checked</li>
+									<li>Parsing / processing logic investigated</li>
+									<li>Root cause isolated</li>
+									<li>Corrective action validated</li>
+								</ol>
+								<p>Protocols and tools: CAN, UDS / ISO 14229, KWP, OBD, Bosch KTS, CAN sniffers.</p>
+							</div>
+
+							<div class="case">
+								<h3>05 &mdash; Working with structured automotive diagnostic data</h3>
+								<p>XML-based automotive diagnostic data describing ECU information, DTC definitions, diagnostic services, request / response structures, parameters, data types and vehicle / ECU configuration.</p>
+<pre><code>ECU
+ |-- Diagnostic services
+ |    |-- Read data
+ |    |-- Read DTC
+ |    `-- Clear DTC
+ |-- DTC definitions
+ `-- Request / Response
+      |-- Parameters
+      `-- Data types</code></pre>
+							</div>
+
+							<div class="case">
+								<h3>06 &mdash; Technical product / program leadership</h3>
+								<p class="flow">Customer / product need &rarr; Requirements &rarr; Technical analysis &rarr; Architecture / solution options &rarr; Prioritization &rarr; Engineering coordination &rarr; Validation &rarr; Release / rollout &rarr; Measurement &rarr; Iteration</p>
+								<p>Across this cycle I clarify requirements, prioritize, track dependencies and technical risks, align stakeholders, coordinate backend, mobile, web, data and AI engineering, validate and roll out, then evaluate KPIs and customer impact &mdash; translating technical problems into product decisions.</p>
+							</div>
+
+							<div class="case">
+								<h3>07 &mdash; Automotive diagnostic data at production scale</h3>
+								<p class="flow">Diagnostic reports (~177k / month) &rarr; Ingestion &rarr; Validation &rarr; Normalization &rarr; Analytics &rarr; Diagnostic intelligence &rarr; Vehicle health</p>
+								<p><strong>Analyses.</strong> DTC frequency, ECU grouping, missing fault information, standard vs non-standard codes, vehicle / model comparisons, session-level metrics, fault patterns and downstream impact.</p>
+								<p><strong>Tools.</strong> Python &middot; SQL &middot; MongoDB &middot; Elasticsearch &middot; Kibana &middot; AWS</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- SDV roadmap -->
+					<section id="sdv" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>SDV technology roadmap</h2>
+							<p>Where I am heading: diagnostics &rarr; connected vehicle &rarr; software-defined vehicle &rarr; technical leadership. Level 1 is what I do today; the later levels are what I am actively building, not production experience.</p>
+<pre><code>            SOFTWARE-DEFINED VEHICLE
+                       |
+     +-----------------+-----------------+
+     |                 |                 |
+Vehicle E/E       Connectivity     Cloud platform
+architecture    (Ethernet, SOME/IP) (vehicle data, OTA)
+     |                 |                 |
+     +-----------------+-----------------+
+                       |
+              Vehicle diagnostics
+                       |
+            Vehicle health / data
+                       |
+             Customer experience</code></pre>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-car"></span>
+									<h3>Level 1 &mdash; Current strength</h3>
+									<p>CAN, UDS, OBD, DTCs, ECU diagnostics, diagnostic data, backend, vehicle health.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Level 2 &mdash; Immediate development</h3>
+									<p>DoIP, Automotive Ethernet, SOME/IP, service-oriented architecture, gateways, zonal architecture.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-microchip"></span>
+									<h3>Level 3 &mdash; SDV platform</h3>
+									<p>AUTOSAR Classic and Adaptive, middleware, OTA, vehicle / cloud architecture, software lifecycle.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-bolt"></span>
+									<h3>Level 4 &mdash; Leadership</h3>
+									<p>Safety, cybersecurity, architecture governance, supplier / Tier-1 coordination, technical roadmap, platform strategy.</p>
+								</section>
+							</div>
 						</div>
 					</section>
 
